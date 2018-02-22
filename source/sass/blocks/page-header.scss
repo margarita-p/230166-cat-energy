@@ -1,0 +1,29 @@
+.page-header {
+}
+
+.page-header__logo-link {
+  position: relative;
+  display: block;
+
+  color: $palette-title;
+  text-decoration: none;
+
+  border-bottom: 1px solid $palette-border-lighten;
+}
+
+.page-header__logo-icon {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+
+  width: 33px;
+  height: 38px;
+}
+
+.page-header__logo-title {
+  display: block;
+  width: 101px;
+  height: 18px;
+  margin: 0 auto;
+  padding: 24px;
+}

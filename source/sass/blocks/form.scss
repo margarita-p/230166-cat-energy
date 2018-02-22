@@ -1,0 +1,29 @@
+.form {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.form__wrapper {
+  @include wrapper;
+}
+
+.form__header-title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include font-primary-normal;
+  font-size: 36px;
+  line-height: 1;
+  color: $palette-title;
+}
+
+.form__header-subtitle {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include font-primary-normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $palette-title;
+  text-transform: uppercase;
+}

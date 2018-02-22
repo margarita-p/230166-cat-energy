@@ -1,0 +1,33 @@
+.btn {
+  @include inline-block;
+  padding: 10px;
+
+  @include font-primary-normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: none;
+  background-color: $palette-primary;
+
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &:focus,
+  &:hover {
+    background-color: $palette-primary-hover;
+  }
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+  &:disabled,
+  .disabled {
+    background-color: $palette-background;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,39 @@
+@mixin wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 0 50px;
+  }
+  @media (min-width: $desktop-width) {
+    max-width: 1000px;
+    padding: 0 100px;
+  }
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin list-none {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font-primary-normal {
+  font-family: Oswald, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-secondary-normal {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-secondary-bold {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
