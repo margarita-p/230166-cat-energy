@@ -1,0 +1,30 @@
+// @import "global/normalize.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/scaffolding.scss";
+
+
+@import "blocks/btn.scss";
+@import "blocks/page-header.scss";
+
+@import "blocks/main-nav.scss";
+@import "blocks/promo.scss";
+@import "blocks/catalog.scss";
+@import "blocks/catalog-card.scss";
+@import "blocks/features.scss";
+@import "blocks/example.scss";
+@import "blocks/range.scss";
+@import "blocks/stats.scss";
+@import "blocks/contacts.scss";
+@import "blocks/major-goods.scss";
+@import "blocks/major-goods-card.scss";
+@import "blocks/additional-goods.scss";
+@import "blocks/additional-goods-card.scss";
+@import "blocks/form.scss";
+@import "blocks/fieldset.scss";
+
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+
+
+// @import "blocks/modal-size.scss";

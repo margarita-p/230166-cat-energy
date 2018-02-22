@@ -1,0 +1,52 @@
+.example {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+
+  background-color: $palette-background;
+}
+
+.example__wrapper {
+  @include wrapper;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 34px;
+
+  @include font-primary-normal;
+  font-size: 36px;
+  line-height: 1;
+  color: $palette-title;
+}
+
+.example__text {
+  margin-bottom: 25px;
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding-right: 10px;
+
+    @include font-secondary-normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: $palette-paragraph;
+  }
+}
+
+.example__stats {
+  margin-bottom: 40px;
+}
+
+.example__info {
+  margin: 0;
+  margin-bottom: 33px;
+
+  @include font-primary-normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: $palette-title;
+  text-align: center;
+  text-transform: uppercase;
+}

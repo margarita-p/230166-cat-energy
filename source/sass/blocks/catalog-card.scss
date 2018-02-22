@@ -1,0 +1,104 @@
+.catalog-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: $palette-background;
+}
+
+.catalog-card__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 12px 0;
+  padding-left: 70px;
+
+  @include font-primary-normal;
+  font-size: 24px;
+  line-height: 37px;
+  color: $palette-title;
+  text-transform: uppercase;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    top: 4px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $palette-primary;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--slim {
+    &::after {
+      top: 2px;
+      left: 10px;
+      width: 35px;
+      height: 49px;
+      background-image: url("../img/icon-cat-slim.svg");
+    }
+  }
+
+  &--pro {
+    &::after {
+      top: 16px;
+      left: -8px;
+      width: 67px;
+      height: 28px;
+      background-image: url("../img/icon-cat-pro.svg");
+    }
+  }
+}
+
+.catalog-card__text {
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include font-secondary-normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: $palette-paragraph;
+  }
+
+  border-bottom: 1px solid $palette-border-darken;
+}
+
+.catalog-card__link {
+  position: relative;
+
+  @include inline-block;
+  padding-top: 22px;
+
+  @include font-primary-normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: $palette-title;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 23px;
+    right: -35px;
+
+    display: block;
+    width: 24px;
+    height: 11px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

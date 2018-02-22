@@ -1,0 +1,41 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__list {
+  @include list-none;
+}
+
+.main-nav__item {
+  padding: 22px;
+
+  @include font-primary-normal;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid $palette-border-lighten;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $palette-title;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -44px;
+  right: 23px;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: center;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}

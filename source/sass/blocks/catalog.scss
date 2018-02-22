@@ -1,0 +1,8 @@
+.catalog {
+  margin-bottom: 34px;
+  padding-top: 22px;
+}
+
+.catalog__wrapper {
+  @include wrapper;
+}
