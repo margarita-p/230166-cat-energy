@@ -1,0 +1,225 @@
+.topic {
+  margin-top: 22px;
+  margin-bottom: 34px;
+  @media (min-width: $desktop-width) {
+    margin-top: 80px;
+  }
+}
+
+.topic__wrapper {
+  @include wrapper;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.topic__card {
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: $palette-background;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 370px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    padding-right: 282px;
+    padding-left: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(50% - 40px);
+    margin-bottom: 80px;
+    min-height: 0;
+    margin-right: 80px;
+    padding-top: 80px;
+    padding-right: 50px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.topic__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 36px;
+  padding-left: 70px;
+
+  @include font-primary;
+  font-size: 24px;
+  line-height: 26px;
+  color: $palette-title;
+  text-transform: uppercase;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+  &::before {
+    top: -12px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $palette-primary;
+  }
+  &::after {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--slim {
+    &::after {
+      top: -15px;
+      left: 10px;
+      width: 35px;
+      height: 49px;
+      background-image: url("../img/icon-cat-slim.svg");
+    }
+  }
+
+  &--pro {
+    &::after {
+      top: -1px;
+      left: -8px;
+      width: 67px;
+      height: 28px;
+      background-image: url("../img/icon-cat-pro.svg");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 38px;
+    &::before {
+      top: 10px;
+      left: auto;
+      right: -220px;
+      width: 200px;
+      height: 200px;
+    }
+    &--slim {
+      &::after {
+        top: 0;
+        left: auto;
+        right: -192px;
+        width: 140px;
+        height: 194px;
+      }
+    }
+    &--pro {
+      &::after {
+        top: 50px;
+        left: auto;
+        right: -252px;
+        width: 268px;
+        height: 112px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+    padding-left: 160px;
+    &::before {
+      top: -32px;
+      left: 0;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+    &--slim {
+      &::after {
+        top: -37px;
+        left: 15px;
+        right: auto;
+        width: 70px;
+        height: 97px;
+      }
+    }
+    &--pro {
+      &::after {
+        top: -10px;
+        left: -18px;
+        right: auto;
+        width: 134px;
+        height: 56px;
+      }
+    }
+  }
+}
+
+.topic__text {
+  margin-bottom: 22px;
+  border-bottom: 1px solid $palette-border-darken;
+
+  @include font-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $palette-paragraph;
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &--narrow {
+    width: calc(100% - 40px);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: $palette-paragraph;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.topic__link {
+  position: relative;
+  align-self: flex-start;
+  @include inline-block;
+
+  @include font-primary;
+  font-size: 16px;
+  line-height: 16px;
+  color: $palette-title;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -35px;
+
+    display: block;
+    width: 24px;
+    height: 11px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    font-size: 20px;
+    line-height: 20px;
+    &::after {
+      top: 4px;
+    }
+  }
+}
