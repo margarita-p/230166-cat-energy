@@ -1,5 +1,8 @@
 .main-nav {
   position: relative;
+  @media (min-width: $desktop-width) {
+    max-width: calc(50% - 80px);
+  }
 }
 
 .main-nav__list {
@@ -7,13 +10,14 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 
 .main-nav__item {
   padding: 22px 0;
 
-  @include font-primary-normal;
+  @include font-primary;
   border-bottom: 1px solid $palette-border-lighten;
   font-size: 20px;
   line-height: 22px;
@@ -27,6 +31,7 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 36px;
+    padding: 10px 0;
     border-bottom: none;
     font-size: 18px;
     line-height: 20px;

@@ -11,7 +11,7 @@
   margin: 0;
   margin-bottom: 30px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 36px;
   line-height: 1;
   color: $palette-title;
@@ -21,7 +21,7 @@
   margin: 0;
   margin-bottom: 30px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 14px;
   line-height: 18px;
   color: $palette-title;

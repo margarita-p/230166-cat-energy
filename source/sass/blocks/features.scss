@@ -10,7 +10,7 @@
   margin: 0;
   margin-bottom: 37px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 36px;
   line-height: 1;
   color: $palette-title;
@@ -31,7 +31,7 @@
     margin: 0;
     margin-bottom: 20px;
 
-    @include font-secondary-normal;
+    @include font-secondary;
     font-size: 14px;
     line-height: 18px;
     color: $palette-paragraph;

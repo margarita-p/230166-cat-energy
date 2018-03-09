@@ -1,111 +1,112 @@
 .promo {
-  position: relative;
-  min-height: 450px;
-  padding-top: 30px;
-  @include wrapper;
-
+  min-width: 280px;
+  min-height: 480px;
   @media (min-width: $tablet-width) {
-    min-height: 844px;
+    height: 825px;
   }
-
   @media (min-width: $desktop-width) {
-    width: 100%;
-    height: 550px;
+    height: 700px;
   }
 }
 
-.promo__text-wrapper {
+.promo__wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   @include wrapper;
-
-  min-height: 450px;
-
+  height: 100%;
+  padding-top: 25px;
+  text-align: center;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    bottom: 175px;
+    background-color: #64a83b;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+  }
   @media (min-width: $tablet-width) {
-    align-items: flex-start;
-
-    min-height: 275px;
-    margin: 0 auto;
-    padding-left: 90px;
+    padding-top: 50px;
+    text-align: left;
+    &::after {
+      display: none;
+    }
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 225px;
+    &::after {
+      top: 0;
+      left: calc(50% + 40px);
+      right: -2000px;
+      bottom: 0;
+      display: block;
+      background-position: 50px bottom;
+    }
   }
 }
 
 .promo__title {
   margin: 0;
-  margin-bottom: 24px;
-
-  @include font-primary-normal;
+  margin-bottom: 20px;
+  @include font-primary;
   font-size: 36px;
-  line-height: 1;
-  color: #ffffff;
+  line-height: 36px;
+  color: $palette-inverse;
   text-align: center;
-
   @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
-
+    margin-left: 90px;
+    margin-bottom: 40px;
     font-size: 60px;
+    line-height: 60px;
     color: $palette-title;
     text-align: left;
+  }
+  @media (min-width: $desktop-width) {
   }
 }
 
 .promo__subtitle {
   margin: 0;
-
-  @include font-primary-normal;
+  margin-bottom: 26px;
+  @include font-primary;
   font-size: 14px;
-  line-height: 1;
-  color: #ffffff;
+  line-height: 14px;
+  color: $palette-inverse;
   text-align: center;
   text-transform: uppercase;
-
   @media (min-width: $tablet-width) {
+    margin-left: 90px;
+    margin-bottom: 40px;
     font-size: 20px;
+    line-height: 20px;
     color: $palette-title;
     text-align: left;
   }
 }
 
 .promo__image-wrapper {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1000px;
-  height: 306px;
-  margin-left: -500px;
-
-  background-color: #64a83b;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-
-  z-index: -1;
-
+  width: 280px;
+  height: 270px;
+  margin: 0 auto;
   @media (min-width: $tablet-width) {
-    left: 40px;
-    height: auto;
-    width: auto;
-    margin-top: 232px;
-    padding: 0 50px;
-    background: none;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+    margin-left: -355px;
   }
-
   @media (min-width: $desktop-width) {
-    top: -150px;
-    left: 760px;
-    height: 700px;
-    width: 4000px;
-    margin: 0;
-    padding: 0 50px;
-    background-color: #64a83b;
-    background-image: url("../img/index-background-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left bottom;
+    top: 140px;
+    left: calc(50% - 137px);
+    width: 552px;
+    height: 499px;
+    margin-left: 0;
   }
 }
 
@@ -113,37 +114,24 @@
   display: block;
   width: 280px;
   height: 270px;
-  margin: 0 auto;
-  margin-top: 166px;
-
   @media (min-width: $tablet-width) {
     width: 709px;
     height: 609px;
-    margin: 0;
   }
-
   @media (min-width: $desktop-width) {
     width: 552px;
     height: 499px;
-    margin-left: -200px;
-    margin-top: 140px;
   }
 }
 
 .promo__btn {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  padding: 16px 26px;
-
+  min-width: 280px;
   font-size: 14px;
-  line-height: 18px;
-
   @media (min-width: $tablet-width) {
     width: auto;
     margin: 0;
+    padding: 16px 26px;
+    margin-left: 90px;
     font-size: 20px;
   }
 }

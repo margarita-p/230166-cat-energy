@@ -40,7 +40,7 @@
 }
 
 .range__btn {
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 1;
   color: $palette-title;

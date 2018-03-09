@@ -10,7 +10,7 @@
   width: 140px;
   margin: 0;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 20px;
   color: $palette-title;
@@ -21,7 +21,7 @@
   width: 140px;
   margin: 0;
 
-  @include font-secondary-normal;
+  @include font-secondary;
   font-size: 14px;
   line-height: 20px;
   color: $palette-paragraph;

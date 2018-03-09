@@ -1,15 +1,13 @@
+html,
 body {
-  // min-width: 320px;
+  min-width: 280px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-
-  @include font-secondary-normal;
+  @include font-secondary;
   font-size: 14px;
   line-height: 24px;
   color: $palette-paragraph;
-
-  background-color: #ffffff;
-
   overflow-x: hidden;
 }
 
@@ -24,8 +22,11 @@ img {
   height: 1px;
   margin-left: -1px;
   padding: 0;
-
   border: 0;
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }

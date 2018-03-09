@@ -17,7 +17,7 @@
   margin: 0;
   margin-bottom: 35px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 24px;
   line-height: 1;
   color: $palette-title;
@@ -59,7 +59,7 @@
   display: block;
   margin-right: 15px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 18px;
   color: $palette-title;
@@ -71,7 +71,7 @@
   width: 100%;
   padding: 15px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 18px;
   color: $palette-title;
@@ -88,7 +88,7 @@
   padding: 7px 0;
   padding-left: 50px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 18px;
   color: $palette-title;
@@ -134,7 +134,7 @@
   width: auto;
   margin-right: 15px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 18px;
   color: $palette-title;
@@ -146,7 +146,7 @@
   width: 100%;
   padding: 15px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 18px;
   color: $palette-title;
@@ -162,7 +162,7 @@
   min-height: 150px;
   padding: 15px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 18px;
   color: $palette-title;
@@ -179,7 +179,7 @@
   padding: 7px 0;
   padding-left: 50px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 18px;
   color: $palette-title;

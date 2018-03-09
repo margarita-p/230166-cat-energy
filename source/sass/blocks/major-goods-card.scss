@@ -35,7 +35,7 @@
     margin: 0;
     margin-bottom: 22px;
 
-    @include font-secondary-normal;
+    @include font-secondary;
     font-size: 12px;
     line-height: 14px;
     color: $palette-paragraph;
@@ -43,7 +43,7 @@
 
   &--special {
     p {
-      @include font-secondary-normal;
+      @include font-secondary;
       font-size: 12px;
       line-height: 14px;
       color: $palette-paragraph;
@@ -58,7 +58,7 @@
   margin-bottom: 12px;
   padding-right: 50px;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -103,7 +103,7 @@
 }
 
 .major-goods-card__td {
-  @include font-secondary-normal;
+  @include font-secondary;
   font-size: 12px;
   line-height: 14px;
   color: $palette-paragraph;

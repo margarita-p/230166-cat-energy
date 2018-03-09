@@ -35,7 +35,7 @@
 .stats__value {
   @include inline-block;
 
-  @include font-primary-normal;
+  @include font-primary;
   font-size: 24px;
   line-height: 1;
   color: $palette-title;
@@ -50,7 +50,7 @@
 
   background-color: $palette-background;
 
-  @include font-secondary-normal;
+  @include font-secondary;
   font-size: 14px;
   line-height: 12px;
   color: $palette-paragraph;
