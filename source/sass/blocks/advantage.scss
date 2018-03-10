@@ -1,0 +1,139 @@
+.advantage {
+  margin-bottom: 47px;
+  margin-top: 30px;
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 80px;
+  }
+}
+
+.advantage__wrapper {
+  @include wrapper;
+}
+
+.advantage__title {
+  margin: 0;
+  margin-bottom: 37px;
+
+  @include font-primary;
+  font-size: 36px;
+  line-height: 1;
+  color: $palette-title;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+    font-size: 60px;
+  }
+}
+
+.advantage__list {
+  @include list-none;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -80px;
+  }
+}
+
+.advantage__item {
+  display: flex;
+  align-items: flex-start;
+  min-height: 60px;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: block;
+    width: 245px;
+    min-height: 230px;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-left: 80px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 120px;
+      z-index: -1;
+
+      @include font-primary;
+      font-size: 280px;
+      line-height: 1;
+      color: #f2f2f2;
+    }
+
+    &--one {
+      &::after {
+        content: "1";
+      }
+    }
+    &--two {
+      &::after {
+        content: "2";
+      }
+    }
+    &--three {
+      &::after {
+        content: "3";
+      }
+    }
+    &--four {
+      &::after {
+        content: "4";
+      }
+    }
+  }
+}
+
+.advantage__icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-color: $palette-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
+
+  &--leaf {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+  &--powder {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+  &--dining {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+  &--clock {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.advantage__text {
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include font-secondary;
+    font-size: 14px;
+    line-height: 18px;
+    color: $palette-paragraph;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: $tablet-width) {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
