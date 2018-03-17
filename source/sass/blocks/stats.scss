@@ -1,59 +1,111 @@
 .stats {
-  margin-bottom: 35px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .stats__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   @include list-none;
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+  }
 }
 
 .stats__item {
-  width: 122px;
-  height: 55px;
-
-  margin-right: 32px;
-  padding: 15px 0;
-
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 125px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  padding: 15px;
   border: 1px solid $palette-border-darken;
   border-radius: 2px;
 
   text-align: center;
 
-  box-sizing: border-box;
-
   &:last-child {
     margin-right: 0;
   }
 
-  p {
-    margin: 0;
-    margin-bottom: 5px;
+  @media (min-width: $tablet-width) {
+    padding: 20px;
+    min-width: 165px;
   }
 }
 
 .stats__value {
-  @include inline-block;
-
   @include font-primary;
   font-size: 24px;
   line-height: 1;
   color: $palette-title;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .stats__description {
-  @include inline-block;
+  position: absolute;
+  top: calc(100% - 8px);
   width: auto;
   padding: 0 15px;
-
   background-color: $palette-background;
 
   @include font-secondary;
-  font-size: 14px;
-  line-height: 12px;
+  font-size: 12px;
+  line-height: 1;
   color: $palette-paragraph;
   text-align: center;
   text-transform: lowercase;
+
+  @media (min-width: $tablet-width) {
+    background-color: #ffffff;
+    font-size: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $palette-background;
+  }
+}
+
+.stats__info {
+  @include font-primary;
+  font-size: 14px;
+  line-height: 1;
+  color: $palette-paragraph;
+  text-align: center;
+  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: right;
+  }
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.stats__info-value {
+  display: inline-block;
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-left: 60px;
+  }
 }

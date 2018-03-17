@@ -1,0 +1,29 @@
+.copyright__link {
+  display: flex;
+  align-items: center;
+
+  color: $palette-paragraph;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.copyright__text {
+  margin-right: auto;
+
+  @include font-secondary;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.copyright__logo {
+  display: block;
+  width: 27px;
+  height: 34px;
+}

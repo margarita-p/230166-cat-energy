@@ -1,19 +1,23 @@
-.topic {
+.programs {
   margin-top: 22px;
   @media (min-width: $desktop-width) {
     margin-top: 80px;
   }
 }
 
-.topic__wrapper {
+.programs__wrapper {
   @include wrapper;
+}
+
+.programs__flex {
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -80px;
   }
 }
 
-.topic__card {
+.programs__item {
   margin-bottom: 20px;
   padding: 20px;
   padding-top: 40px;
@@ -34,19 +38,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: calc(50% - 40px);
-    margin-bottom: 0;
+    width: calc(50% - 80px);
     min-height: 0;
-    margin-right: 80px;
+    margin-left: 80px;
+    margin-bottom: 40px;
     padding-top: 80px;
     padding-right: 50px;
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
 
-.topic__title {
+.programs__title {
   position: relative;
   margin: 0;
   margin-bottom: 36px;
@@ -159,7 +160,7 @@
   }
 }
 
-.topic__text {
+.programs__text {
   margin-bottom: 22px;
   border-bottom: 1px solid $palette-border-darken;
 
@@ -192,7 +193,7 @@
   }
 }
 
-.topic__link {
+.programs__link {
   position: relative;
   align-self: flex-start;
   @include inline-block;

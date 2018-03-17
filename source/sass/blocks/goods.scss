@@ -1,0 +1,238 @@
+.goods {
+  margin-top: 30px;
+}
+
+.goods__wrapper {
+  min-width: 280px;
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.goods__title {
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0 20px;
+
+  @include font-primary;
+  font-size: 36px;
+  line-height: 1;
+  color: $palette-title;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.goods__flex {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -80px;
+  }
+}
+
+.goods__item {
+  padding: 24px 20px;
+  padding-top: 0;
+  border-bottom: 1px solid $palette-border-lighten;
+  &:first-child {
+    border-top: 1px solid $palette-border-lighten;
+  }
+  &--special {
+    padding-top: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    flex-basis: calc(50% - 60px);
+    margin-left: 60px;
+    padding: 40px;
+    border-bottom: none;
+    &:first-child {
+      border-top: none;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 80px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: $palette-background;
+    }
+    &--special {
+      padding-top: 140px;
+      &::after {
+        border: 1px solid $palette-background;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+    flex-basis: calc(33% - 60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: calc(25% - 80px);
+    margin-left: 80px;
+  }
+}
+
+.goods__flex-content {
+  display: flex;
+  align-items: flex-start;
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.goods__image-link {
+  display: block;
+  width: 140px;
+  height: 144px;
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+}
+
+.goods__image {
+  display: block;
+  width: 140px;
+  height: 144px;
+}
+
+.goods__info {
+  margin: 24px 0;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 35px;
+  }
+}
+
+.goods__item-title {
+  margin: 0;
+  margin-bottom: 12px;
+  padding-right: 50px;
+
+  @include font-primary;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  a {
+    color: $palette-title;
+    text-decoration: none;
+  }
+
+  &--special {
+    position: relative;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-top: 55px;
+
+    text-align: center;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 1px;
+      height: 30px;
+      background-color: $palette-border-darken;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+    a {
+      color: $palette-title;
+      text-decoration: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    font-size: 20px;
+    text-align: center;
+    &--special {
+      padding: 0;
+      padding-top: 110px;
+      &::after,
+      &::before {
+        height: 60px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    &--special {
+      padding-top: 110px;
+    }
+  }
+}
+
+.goods__table {
+  width: 100%;
+  border-collapse: collapse;
+
+  @include font-secondary;
+  font-size: 12px;
+  line-height: 14px;
+  color: $palette-paragraph;
+}
+
+.goods__td {
+  @include font-secondary;
+  font-size: 12px;
+  line-height: 1;
+  color: $palette-paragraph;
+
+  &--value {
+    text-align: right;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0;
+    border-bottom: 1px solid $palette-border-darken;
+
+    font-size: 16px;
+  }
+}
+
+.goods__btn {
+  width: 100%;
+  &--special {
+    color: $palette-title;
+    background-color: $palette-background;
+  }
+}
+
+.goods__special-text {
+  margin-bottom: 20px;
+  @include font-secondary;
+  font-size: 12px;
+  line-height: 14px;
+  color: $palette-paragraph;
+  text-align: center;
+}
