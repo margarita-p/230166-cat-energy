@@ -13,36 +13,37 @@
   justify-content: center;
   flex-wrap: wrap;
   @include list-none;
+  margin-left: -30px;
   @media (min-width: $tablet-width) {
     margin-right: auto;
+    margin-left: -42px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
   }
 }
 
 .stats__item {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 125px;
-  margin-right: 30px;
-  margin-bottom: 40px;
-  padding: 15px;
-  border: 1px solid $palette-border-darken;
-  border-radius: 2px;
-
+  width: 125px;
+  margin-left: 30px;
+  margin-bottom: 22px;
   text-align: center;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
   @media (min-width: $tablet-width) {
-    padding: 20px;
-    min-width: 165px;
+    width: 160px;
+    margin-left: 42px;
   }
 }
 
 .stats__value {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid $palette-border-darken;
+  border-radius: 2px;
+
   @include font-primary;
   font-size: 24px;
   line-height: 1;
@@ -51,15 +52,16 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding: 20px;
     font-size: 30px;
   }
 }
 
 .stats__description {
-  position: absolute;
-  top: calc(100% - 8px);
-  width: auto;
-  padding: 0 15px;
+  flex-shrink: 2;
+  width: calc(100% - 15px);
+  margin-top: -8px;
+  padding: 0 5px;
   background-color: $palette-background;
 
   @include font-secondary;
@@ -82,7 +84,7 @@
 .stats__info {
   @include font-primary;
   font-size: 14px;
-  line-height: 1;
+  line-height: 16px;
   color: $palette-paragraph;
   text-align: center;
   text-transform: uppercase;
@@ -90,8 +92,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 20px;
+    line-height: 30px;
     text-align: right;
   }
   @media (min-width: $desktop-width) {
@@ -100,12 +103,7 @@
 }
 
 .stats__info-value {
-  display: inline-block;
-  @media (min-width: $tablet-width) {
-    margin-top: 5px;
-  }
   @media (min-width: $desktop-width) {
-    margin-top: 0;
-    margin-left: 60px;
+    margin-left: 50px;
   }
 }

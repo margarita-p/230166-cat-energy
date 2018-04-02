@@ -17,7 +17,11 @@
     <div class="page-header__wrapper">
       <div class="page-header__logo">
         <a class="page-header__logo-link" aria-label="Кэт энерджи">
-          <img class="page-header__logo-icon" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-icon" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+          </picture>
           <img class="page-header__logo-title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
       </div>

@@ -1,13 +1,14 @@
 .contacts {
+  position: relative;
+  z-index: 1;
+  background-color: $palette-inverse;
   @media (min-width: $desktop-width) {
-    margin-top: 90px;
+    margin-top: 0;
   }
 }
 
 .contacts__wrapper {
   @include wrapper;
-  position: relative;
-
   @media (min-width: $desktop-width) {
     position: relative;
   }
@@ -15,11 +16,20 @@
 
 .contacts__content {
   display: flex;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 25px;
   background-color: $palette-inverse;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 57px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
+    left: 110px;
     top: 100px;
     z-index: 1;
     width: 570px;
@@ -57,12 +67,15 @@
 }
 
 .contacts__last-line {
-  margin-top: auto;
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .contacts__map {
   width: 100%;
   height: 362px;
+  background-color: #e8e8e8;
   iframe {
     width: 100%;
     height: 100%;

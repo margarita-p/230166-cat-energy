@@ -1,91 +1,213 @@
 .range {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (min-width: $tablet-width) {
+
+  }
+  @media (min-width: $desktop-width) {
+    margin-right: -60px;
   }
 }
 
-.range__info {
+.range__image-wrapper {
   position: relative;
   width: 320px;
-  height: 320px;
-  margin-left: -20px;
-  padding-bottom: 80px;
-  overflow: hidden;
+  height: 240px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    width: 600px;
-    height: 640px;
-    padding-bottom: 110px;
+    width: 690px;
+    height: 517px;
+    margin-bottom: 15px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
   }
 }
 
-.range__item {
+.range__image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 320px;
-  height: 240px;
-  img {
-    display: block;
-    width: 320px;
-    height: 240px;
+  width: 100%;
+  height: 100%;
+  transition: width 0.6s linear;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &--before {
+    width: 100%;
+    img {
+      width: 242px;
+      height: 232px;
+      margin-left: 18px;
+    }
   }
-  &--hide {
-    display: none;
+
+  &--after {
+    width: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 320px;
+      height: 240px;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    width: 600px;
-    height: 500px;
+    width: 50%;
+
     img {
-      width: 600px;
-      height: 500px;
+      width: 690px;
+      height: 517px;
+    }
+
+    &--before {
+      img {
+        margin-left: 2px;
+      }
+    }
+
+    &--after {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 170px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #eaeaea;
+      }
+      box-shadow: 1000px 1170px 0 1000px #eaeaea;
+
+      img {
+        position: relative;
+        z-index: 1;
+        margin-right: -11px;
+      }
+    }
+  }
+  @media (min-width: $desktop-width) {
+    &--before {
+      width: 50%;
+      img {
+        margin-left: -20px;
+      }
+    }
+
+    &--after {
+      width: 50%;
+      &::after {
+        top: 190px;
+        background-color: #eaeaea;
+      }
+      box-shadow: 1000px 1190px 0 1000px #eaeaea;
+      img {
+        margin-right: 20px;
+      }
     }
   }
 }
 
 .range__controls {
-  position: absolute;
-  bottom: 40px;
+  position: relative;
+  z-index: 1;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media (min-width: $tablet-width) {
+  }
 }
 
 .range__scale {
-  width: 82px;
+  position: relative;
+  width: 84px;
   height: 12px;
   border: 1px solid $palette-border-darken;
   border-radius: 6px;
   background-color: #ffffff;
+  box-sizing: content-box;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    background-color: $palette-border-darken;
+    border: none;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
-.range__bar {
-  width: 72px;
-  height: 6px;
-  margin: 3px 5px;
-  border-radius: 3px;
+.range__toggle {
+  position: absolute;
+  width: 42px;
+  height: 12px;
+  border: 3px solid $palette-inverse;
+  border-radius: 6px;
   background-color: $palette-primary;
+
+  @media (min-width: $tablet-width) {
+    top: calc(50% - 17px);
+    left: calc(50% - 17px);
+    width: 34px;
+    height: 34px;
+
+    border: 12px solid $palette-inverse;
+    border-radius: 50%;
+    background-color: $palette-primary;
+    box-shadow: 0 0 0 1px  $palette-border-darken, -2px 2px 5px 0 rgba(#000000, 0.15);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px  $palette-border-darken, -3px 3px 5px 0 rgba(#000000, 0.25);
+    }
+    &:active {
+      box-shadow: 0 0 0 2px  $palette-primary, -4px 4px 5px 0 rgba(#000000, 0.30);
+    }
+  }
 }
 
 .range__btn {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
   @include font-primary;
   font-size: 16px;
   line-height: 1;
   color: $palette-title;
   text-transform: uppercase;
 
-  background: none;
-  border: none;
-
-  &--prev {
-    margin-right: 12px;
+  &--before {
+    margin-right: 15px;
+  }
+  &--after {
+    margin-left: 15px;
   }
 
-  &--next {
-    margin-left: 12px;
+  @media (min-width: $tablet-width) {
+    margin-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #989898;
+    font-size: 20px;
+
+    &--before {
+      margin-right: 18px;
+    }
+    &--after {
+      margin-left: 18px;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+    }
+    &:active {
+      border-bottom: none;
+    }
   }
 }

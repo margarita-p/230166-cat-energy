@@ -1,7 +1,10 @@
-.copyright__link {
-  display: flex;
-  align-items: center;
+.copyright {
+  text-align: right;
+}
 
+.copyright__link {
+  display: inline-flex;
+  align-items: center;
   color: $palette-paragraph;
   text-decoration: none;
 

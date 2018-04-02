@@ -1,18 +1,22 @@
 .promo {
+  position: relative;
   min-width: 280px;
+  box-sizing: border-box;
   @media (min-width: $tablet-width) {
-    height: 825px;
+    min-height: 778px;
+    margin-top: 36px;
+    padding-bottom: 30px;
   }
   @media (min-width: $desktop-width) {
-    height: 700px;
+    min-height: 695px;
+    margin-top: 0;
   }
 }
 
 .promo__wrapper {
-  position: relative;
+
   @include wrapper;
-  height: 100%;
-  padding-top: 25px;
+  padding-top: 28px;
   text-align: center;
   &::after {
     content: "";
@@ -25,11 +29,11 @@
     background-color: #64a83b;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: auto;
     background-position: center;
   }
   @media (min-width: $tablet-width) {
-    padding-top: 50px;
+    padding-top: 0;
     text-align: left;
     &::after {
       display: none;
@@ -40,24 +44,26 @@
     &::after {
       top: 0;
       left: calc(50% + 40px);
-      right: -2000px;
+      right: 0;
       bottom: 0;
       display: block;
-      background-position: 50px bottom;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: right bottom;
+      background-size: contain;
     }
   }
 }
 
 .promo__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   @include font-primary;
   font-size: 36px;
   line-height: 36px;
   color: $palette-inverse;
   text-align: center;
   @media (min-width: $tablet-width) {
-    margin-left: 90px;
+    margin-left: 87px;
     margin-bottom: 40px;
     font-size: 60px;
     line-height: 60px;
@@ -65,12 +71,13 @@
     text-align: left;
   }
   @media (min-width: $desktop-width) {
+    margin-left: 80px;
   }
 }
 
 .promo__subtitle {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   @include font-primary;
   font-size: 14px;
   line-height: 14px;
@@ -78,12 +85,15 @@
   text-align: center;
   text-transform: uppercase;
   @media (min-width: $tablet-width) {
-    margin-left: 90px;
-    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-bottom: 43px;
     font-size: 20px;
     line-height: 20px;
     color: $palette-title;
     text-align: left;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -91,19 +101,17 @@
   width: 280px;
   height: 270px;
   margin: 0 auto;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 250px;
-    left: 50%;
     z-index: -1;
     width: 709px;
     height: 609px;
-    margin-left: -355px;
+    margin-top: -24px;
   }
   @media (min-width: $desktop-width) {
-    top: 140px;
-    left: calc(50% - 137px);
+    top: 165px;
+    left: calc(50% - 160px);
     width: 552px;
     height: 499px;
     margin-left: 0;
@@ -134,5 +142,8 @@
     padding: 16px 26px;
     margin-left: 90px;
     font-size: 20px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
   }
 }

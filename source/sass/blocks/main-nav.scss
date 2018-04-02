@@ -1,8 +1,5 @@
 .main-nav {
   position: relative;
-  @media (min-width: $desktop-width) {
-    max-width: calc(50% - 80px);
-  }
 }
 
 .main-nav__list {
@@ -27,11 +24,19 @@
     display: block;
     text-decoration: none;
     color: $palette-title;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tablet-width) {
     margin-right: 36px;
-    padding: 10px 0;
+    padding: 0;
     border-bottom: none;
     font-size: 18px;
     line-height: 20px;
@@ -40,8 +45,16 @@
     }
     &--active {
       a {
-        padding-bottom: 12px;
+        padding-bottom: 8px;
         border-bottom: 2px solid $palette-primary;
+        cursor: default;
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+        &:active {
+          opacity: 1;
+        }
       }
     }
   }
@@ -49,11 +62,6 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 22px;
-    &--active {
-      a {
-        border-bottom: 2px solid $palette-inverse;
-      }
-    }
   }
 }
 

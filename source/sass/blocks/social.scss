@@ -31,4 +31,18 @@
     background-image: url("../img/icon-fb-mobile.svg");
     background-size: 10px 19px;
   }
+
+  @media (min-width: $tablet-width) {
+    &--vk {
+      background-size: 30px 16px;
+    }
+
+    &--insta {
+      background-size: 23px 23px;
+    }
+
+    &--fb {
+      background-size: 14px 28px;
+    }
+  }
 }
